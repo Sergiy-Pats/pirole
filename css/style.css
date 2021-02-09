@@ -245,7 +245,7 @@ html {
 .abuot__body {
   min-height: 420px;
   text-align: center;
-  padding: 100px 15px;
+  padding: 98px 15px;
 }
 
 .abuot__title {
@@ -253,11 +253,12 @@ html {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 30px;
+  margin-left: 5px;
 }
 
 .abuot__text {
   max-width: 680px;
-  margin: 0 auto 30px;
+  margin: 0 auto 35px;
   font-size: 16px;
   color: #666666;
   line-height: 1.5;
