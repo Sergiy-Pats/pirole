@@ -106,6 +106,7 @@ html {
   -ms-grid-rows: 25px;
   -ms-grid-columns: 31px 1fr;
       grid-template: 25px/ 31px 1fr;
+  margin-right: 10px;
 }
 
 .header__logo {
@@ -557,7 +558,7 @@ html {
           transform: scale(1.15, 1.15);
 }
 
-@media (max-width: 679px) {
+@media (max-width: 640px) {
   .gallery .gallery__item:nth-child(odd) {
     display: none;
   }
