@@ -916,7 +916,7 @@ html {
   background-color: #0fc0ba;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 656px) {
   .input {
     overflow: hidden;
   }
