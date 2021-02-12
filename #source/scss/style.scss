@@ -760,6 +760,13 @@ html {
 		& span {
 			display: block;
 		}
+		&:hover {
+			background-color: #0fb3ad;
+		}
+
+		&:active {
+			background-color: #0fc0ba;
+		}
 	}
 }
 @media (max-width: 512px) {

@@ -908,6 +908,14 @@ html {
   display: block;
 }
 
+.input__button:hover {
+  background-color: #0fb3ad;
+}
+
+.input__button:active {
+  background-color: #0fc0ba;
+}
+
 @media (max-width: 512px) {
   .input {
     overflow: hidden;
