@@ -11,6 +11,7 @@ jQuery('document').ready(function () {
 	})
 	jQuery('.poppup').click(function (event) {
 		window.location = jQuery('.close').attr('href');
+		jQuery('body').removeClass('lock');
 	});
 })
 
