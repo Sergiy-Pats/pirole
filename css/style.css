@@ -654,6 +654,10 @@ html {
   display: none;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .poppup:target {
   display: block;
   position: fixed;
