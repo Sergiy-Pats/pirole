@@ -776,7 +776,7 @@ body .close {
   margin-bottom: 100px;
 }
 
-.process__video iframe {
+.process__video video {
   height: 100%;
   width: 100%;
   position: absolute;
