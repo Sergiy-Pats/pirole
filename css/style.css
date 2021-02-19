@@ -790,6 +790,7 @@ body .close {
 }
 
 .services__items {
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(290px, auto))[auto-fit];
@@ -829,6 +830,88 @@ body .close {
   font-weight: 400;
   letter-spacing: 0.005em;
   color: #787878;
+}
+
+@media (max-width: 1168px) {
+  .services {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+  .services__item {
+    text-align: center;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+  .services__items {
+    position: relative;
+    /*.slick-center {
+				opacity: 1;
+			}*/
+  }
+  .services__items .slick-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .services__items .slick-slide {
+    max-height: 160px;
+  }
+  .services__items .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 10;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+  }
+  .services__items .slick-arrow.slick-next {
+    background: url(../img/icon/left.svg) 0 0/70% no-repeat;
+    right: 16px;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  .services__items .slick-arrow.slick-prev {
+    background: url(../img/icon/left.svg) 0 0/70% no-repeat;
+    left: 16px;
+  }
+  .services__items .slick-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .services__items .slick-dots li {
+    list-style: none;
+    margin: 0 10px;
+  }
+  .services__items .slick-dots li.slick-active button {
+    background-color: rgba(11, 114, 54, 0.918);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .services__items .slick-dots button {
+    font-size: 0;
+    width: 6px;
+    height: 6px;
+    background-color: #10c9c3;
+    border-radius: 20%;
+  }
 }
 
 .testimonials {
@@ -882,6 +965,7 @@ body .close {
 .clients {
   min-height: 200px;
   background-color: #ffffff;
+  padding: 50px;
 }
 
 .clients__body {
@@ -889,10 +973,9 @@ body .close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px;
 }
 
@@ -905,35 +988,33 @@ body .close {
   opacity: 0.5;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
+  .clients {
+    padding: 25px 14px;
+  }
   .clients__body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
     overflow: hidden;
     padding: 67.5px 25px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
   }
   .clients__item {
-    position: relative;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-    width: 89px;
-    height: 65px;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    margin: 15px 10px;
   }
-  .clients__item:nth-child(3) {
-    margin: 0 50px;
+  .clients__item:nth-child(odd) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
   }
-  .clients__item:nth-child(1) {
-    margin-left: -20px;
-    margin-right: 20px;
-  }
-  .clients__item:nth-child(5) {
-    margin-left: 22px;
-    margin-right: -22px;
+  .clients__item:last-child {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / span 2;
   }
 }
 
